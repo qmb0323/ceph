@@ -207,7 +207,7 @@ from the cluster. You may also remove objects from the cluster. For example:
 	ioctx.write_full("hw", "Hello World!")
 
 	print("\n\nContents of object 'hw'\n------------------------\n")
-	print(ioctx.read("hw"))
+	print(("hw"))
 
 	print("\nRemoving object 'hw'")
 	ioctx.remove_object("hw")
@@ -380,8 +380,8 @@ has a name (or key) and data.
 .. automethod:: Ioctx.write_full(key, data)
 .. automethod:: Ioctx.aio_flush()
 .. automethod:: Ioctx.set_locator_key(loc_key)
-.. automethod:: Ioctx.aio_read(object_name, length, offset, oncomplete)
-.. automethod:: Ioctx.read(key, length=8192, offset=0)
+.. automethod:: Ioctx.aio_read(object_name, offset, length, oncomplete)
+.. automethod:: Ioctx.read(key, offset=0, length=8192)
 .. automethod:: Ioctx.stat(key)
 .. automethod:: Ioctx.trunc(key, size)
 .. automethod:: Ioctx.remove_object(key)
